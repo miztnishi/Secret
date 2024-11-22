@@ -23,23 +23,23 @@ struct MakePassView: View {
     
     
     var body: some View {
-        //        Text("s")
         VStack{
-            Text("パスワードに含める文字種")
+            Text("CHARACTER_TYPES")
                 .font(.headline)
                 .padding(5)
+            
             HStack{
-                passwordkindsText(tittle: "英字(小)", subTitle: "abc...", isOn: $isPassLowCase)
-                passwordkindsText(tittle: "英字(大)", subTitle: "ABC...", isOn: $isPassUpperCase)
-                passwordkindsText(tittle: "数字", subTitle: "123...", isOn: $isPassNumber)
-                passwordkindsText(tittle: "記号", subTitle: "/-*+!#...", isOn: $isPassSymbol)
+                passwordkindsText(tittle: "LOWER_CASE", subTitle: "abc...", isOn: $isPassLowCase)
+                passwordkindsText(tittle: "UPPER_CASE", subTitle: "ABC...", isOn: $isPassUpperCase)
+                passwordkindsText(tittle: "NUMBER_TEXT", subTitle: "123...", isOn: $isPassNumber)
+                passwordkindsText(tittle: "SYMBOL_TEXT", subTitle: "/-*+!#...", isOn: $isPassSymbol)
 
             }
             .padding(5)
             
             
             VStack{
-                Text("パスワードの文字数")
+                Text("NUMBER_PASSWORD_COUNT")
                     .font(.headline)
                 Picker("",selection: $selectedNumer){
                     ForEach(numerList,id:\.self ){ num in
@@ -52,7 +52,7 @@ struct MakePassView: View {
             .padding(5)
             
             VStack(alignment: .center){
-                Button("パスワード候補を生成", action: {
+                Button("GENERATE_PASSOWRD_TEXT", action: {
                     self.genaratedStrList = []
                     generatePassword()
                 }).disabled(isPassLowCase || isPassUpperCase || isPassNumber || isPassSymbol ? false  : true )
@@ -112,7 +112,7 @@ struct MakePassView: View {
 }
 
 struct passwordkindsText: View {
-    let tittle:String
+    let tittle:LocalizedStringResource
     let subTitle:String
     @Binding var  isOn:Bool
     var body: some View {

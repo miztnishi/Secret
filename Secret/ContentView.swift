@@ -6,6 +6,19 @@
 //
 //
 
+/*
+課金要素
+    - 6以上は課金
+    - 200円のサブスク
+    - +ボタンを押した時の広告表示をなくす
+    - 画面下部に広告エリアを非表示
+無課金の場合
+    - +ボタンを押した時に広告を出す
+    - 画面下部に広告エリアを表示
+    - 5個まで登録可
+*/
+//アプリ公開まで https://yakkylab.com/app-process-all/#toc12
+//admob : https://admob.google.com/intl/ja/home/
 
 
 
@@ -14,7 +27,7 @@ import SwiftData
 import LocalAuthentication
 
 
-enum SearchBy:String,Identifiable,CaseIterable  {
+enum SearchBy:String,Identifiable,CaseIterable,Codable  {
     case service,mail
     var id: Self{self}
 }
@@ -45,7 +58,8 @@ struct ContentView: View {
                             .background(Color.gray.opacity(0.1))
                             .cornerRadius(15)
                     }
-                    .frame(height: 10)
+//                    .frame(height: 10)
+                    .font(.title2)
                 }
                 ListView(searchString: searchString, searchBy: searchBy)
             }
@@ -76,14 +90,12 @@ struct ContentView: View {
                 ToolbarItem {
                     EditButton()
                 }
-                ToolbarItem {
-                    Button(action: closeItem) {
-                        Label("setting", systemImage: "gearshape.fill")
-                    }
-                }
             }
             .onDisappear(){
                 closeItem()
+            }
+            .onAppear(){
+                faceAuth.authStateChanger()
             }
             //アクティブ時
             .onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)) { notification in
@@ -109,6 +121,10 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
-        .modelContainer(for: Item.self, inMemory:  false)
+    ForEach(["en", "ja"], id: \.self) { id in
+        
+        ContentView()
+            .modelContainer(Item.preview)
+            .environment(\.locale, .init(identifier: id))
+    }
 }

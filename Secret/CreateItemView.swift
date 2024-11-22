@@ -17,7 +17,7 @@ struct CreateItemView: View {
     var body: some View {
         VStack{
             
-            Text("サービス登録")
+            Text("SERVICE_CREATE")
                 .font(.title)
             
             HStack{
@@ -26,8 +26,9 @@ struct CreateItemView: View {
                 TextField("service", text: $item.service)
                     .multilineTextAlignment(.leading)
                     .background(Color.gray.opacity(0.1))
+                
             }
-            
+            .font(.title2)
             HStack{
                 Text("e-mail      ")
                 Text(":")
@@ -35,6 +36,7 @@ struct CreateItemView: View {
                     .multilineTextAlignment(.leading)
                     .background(Color.gray.opacity(0.1))
             }
+            .font(.title2)
             
             
             HStack{
@@ -43,28 +45,29 @@ struct CreateItemView: View {
                 TextField("password", text: $item.password)
                     .multilineTextAlignment(.leading)
                     .background(Color.gray.opacity(0.1))
-            }
-        
-
+            }.font(.title2)
+            
+            
             VStack{
-            Button(action: {self.isShowSheet = true}, label: {
-                Text("パスワードを自動生成する")
-                    .sheet(isPresented: $isShowSheet) {
-                        MakePassView( selectedPassWord: $item.password).presentationDetents([.medium])
-                    }
-            })
-            .padding(5)
-            Button(action: {
-                modelContext.insert(item)
-                dismiss()
-            }, label: {
-                Text("登録")
-            })
-            .padding(5)
-            .foregroundColor(.white)
-            .background(item.mail.isEmpty || item.password.isEmpty || item.service.isEmpty ? .gray : .blue)
-            .clipShape(.capsule)
-            .disabled(item.mail.isEmpty || item.password.isEmpty || item.service.isEmpty ? true :false)
+                Button(action: {self.isShowSheet = true}, label: {
+                    Text("CREATE_PASSWORD")
+                        .sheet(isPresented: $isShowSheet) {
+                            MakePassView( selectedPassWord: $item.password).presentationDetents([.medium])
+                        }
+                })
+                .padding(5)
+                Button(action: {
+                    modelContext.insert(item)
+                    dismiss()
+                }, label: {
+                    Text("CREATE_BUTTON_TEXT")
+                })
+                .padding(5)
+                .foregroundColor(.white)
+                .background(item.mail.isEmpty || item.password.isEmpty || item.service.isEmpty ? .gray : .blue)
+                .clipShape(.capsule)
+                .disabled(item.mail.isEmpty || item.password.isEmpty || item.service.isEmpty ? true :false)
+                .font(.title2)
             }
         }
         .padding()
@@ -75,5 +78,5 @@ struct CreateItemView: View {
 
 #Preview {
     CreateItemView(item: Item( service: "", mail: "",password: ""))
-        
+    
 }

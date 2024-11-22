@@ -1,0 +1,225 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+
+    },
+    ":" : {
+
+    },
+    "%@" : {
+
+    },
+    "%lld" : {
+
+    },
+    "Add Item" : {
+
+    },
+    "CHARACTER_TYPES" : {
+      "comment" : "パスワードに含める文字種",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Character types"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "パスワードに含める文字種"
+          }
+        }
+      }
+    },
+    "close all" : {
+
+    },
+    "CREATE_BUTTON_TEXT" : {
+      "comment" : "登録ボタン",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "create"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "登録"
+          }
+        }
+      }
+    },
+    "CREATE_PASSWORD" : {
+      "comment" : "パスワード生成画面へ遷移",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "create password"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "パスワードを自動生成する"
+          }
+        }
+      }
+    },
+    "e-mail" : {
+
+    },
+    "e-mail      " : {
+
+    },
+    "GENERATE_PASSOWRD_TEXT" : {
+      "comment" : "パスワード候補を生成",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "generate passwords"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "パスワード候補を生成"
+          }
+        }
+      }
+    },
+    "Hello, World!" : {
+
+    },
+    "LOWER_CASE" : {
+      "comment" : "英字(小)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "lower case"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "英字(小)"
+          }
+        }
+      }
+    },
+    "NUMBER_PASSWORD_COUNT" : {
+      "comment" : "パスワードの文字数",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "number of password characters"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "パスワードの文字数"
+          }
+        }
+      }
+    },
+    "NUMBER_TEXT" : {
+      "comment" : "数字",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "number"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "数字"
+          }
+        }
+      }
+    },
+    "password" : {
+
+    },
+    "search" : {
+
+    },
+    "service" : {
+
+    },
+    "service    " : {
+
+    },
+    "SERVICE_CREATE" : {
+      "comment" : "サービス登録",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "register service"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "サービス登録"
+          }
+        }
+      }
+    },
+    "SYMBOL_TEXT" : {
+      "comment" : "記号",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "symbol"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "記号"
+          }
+        }
+      }
+    },
+    "UPPER_CASE" : {
+      "comment" : "英字(大)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "upper case"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "英字(大)"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
